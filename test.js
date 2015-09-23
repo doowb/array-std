@@ -15,5 +15,7 @@ var std = require('./');
 describe('array-std', function () {
   it('should calculate the standard deviation', function () {
     assert.equal(std([1, 2, 3, 4, 5, 6, 7, 8, 9, 25]), 6.48074069840786);
+    assert.equal(std(['1', 2, '3', 4, 5, '6', 7, 8, 9, 25]), 6.48074069840786);
+    assert.equal(std(['1', 'foo', 2, '3', 4, 5, '6', 7, {}, 8, 9, 25]), 6.011177859559577);
   });
 });
